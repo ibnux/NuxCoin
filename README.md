@@ -1,9 +1,7 @@
 NUXCOIN Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/nuxcoin-project/nuxcoin.svg?branch=master)](https://travis-ci.org/nuxcoin-project/nuxcoin)
-
-https://nuxcoin.org
+https://github.com/ibnux/NuxCoin
 
 What is NUXCOIN?
 ----------------
@@ -15,7 +13,18 @@ out collectively by the network. NUXCOIN Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the NUXCOIN Core software, see [https://nuxcoin.org](https://nuxcoin.org).
+the NUXCOIN Core software, see [https://github.com/ibnux/NuxCoin](https://github.com/ibnux/NuxCoin).
+
+INSTALL ON RASPBIAN
+-------------------
+- Make SwapFile 1GB
+- `sudo apt-get install git build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libminiupnpc-dev libzmq3-dev jq libboost-all-dev g++-arm-linux-gnueabihf`
+- `./autogen.sh`
+- `./configure CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" --enable-cxx --without-gui --disable-shared --with-pic --enable-upnp-default --disable-wallet --with-boost-libdir=/usr/lib/arm-linux-gnueabihf`
+- `make check`
+- `sudo make install`
+- `cd ~/`
+- `nuxcoind -daemon`
 
 License
 -------
