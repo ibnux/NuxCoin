@@ -52,7 +52,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     const char* pszTimestamp = "Tambah 2.719, Kasus Positif Corona di RI Hari Ini Pecah Rekor Tertinggi";
-    const CScript genesisOutputScript = CScript() << ParseHex("0456DDAF2C97E7DBD10A5322B2589486FE80B4ABB0DF78AE7008711D9214DBC8DEB9459F8BAF35052D244105DCC4359CB8875E782E9A5FDAA4CE9DE50275A0B091") << OP_CHECKSIG;
+    const CScript genesisOutputScript = CScript() << ParseHex("04ECE213145DC3BE271E45BE9A5B80577FBD0199FE28C81AF35B5E04C880CFB61CC188385B882AB675405CD87A8D1F63B6E823F583BD350ACA48EC881AEB14AC6A") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
