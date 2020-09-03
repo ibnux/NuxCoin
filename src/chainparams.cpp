@@ -66,7 +66,7 @@ public:
         consensus.nSubsidyHalvingInterval = 840000;
         consensus.BIP16Height = 0; // 87afb798a3ad9378fcd56123c81fb31cfd9a8df4719b9774d71730c16315a092 - October 1, 2012
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("cf25e87275f213d6113127e43c481acf8f26acc0475ef838f37e0fa92ac42331");
+        consensus.BIP34Hash = uint256S("de14ffc248f21e5c4fac54e4ccb5608f5581bf43b36a51795fa985ec09af4114");
         consensus.BIP65Height = 0; // bab3041e8977e0dc3eeff63fe707b92bde1dd449d8efafb248c27c8264cc311a
         consensus.BIP66Height = 0; // 7aceee012833fa8952f8835d8b1b3ae233cd6ab08fdb27a771d2bd7bdc491894
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
@@ -110,9 +110,9 @@ public:
         m_assumed_blockchain_size = 22;
         m_assumed_chain_state_size = 3;
 
-        genesis = CreateGenesisBlock(1598641735, 63562, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1599150992, 480638, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0xcf25e87275f213d6113127e43c481acf8f26acc0475ef838f37e0fa92ac42331"));
+        assert(consensus.hashGenesisBlock == uint256S("0xde14ffc248f21e5c4fac54e4ccb5608f5581bf43b36a51795fa985ec09af4114"));
         assert(genesis.hashMerkleRoot == uint256S("0x313b74207ab6a92afff519ffe2748820ca28682d7dc8f6aa6d4ae949cb27d22c"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
@@ -125,7 +125,7 @@ public:
         //vSeeds.emplace_back("dnsseed.nuxcointools.com");
         //vSeeds.emplace_back("dnsseed.nuxcoinpool.org");
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,22);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,20);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,50);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,176);
